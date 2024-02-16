@@ -7,6 +7,14 @@
 ### customizable as possible.
 ###
 
+# ver. Thu/15/Nov/2024
+#
+# Made by: CyberCoral
+# ------------------------------------------------
+# Github:
+# https://www.github.com/CyberCoral
+#
+
 ###
 ### Modules:
 ###
