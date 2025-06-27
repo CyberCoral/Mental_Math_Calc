@@ -7,7 +7,7 @@
 ### customizable as possible.
 ###
 
-# ver. Thu/15/Nov/2024
+# ver. Fri/27/Jun/2025
 #
 # Made by: CyberCoral
 # ------------------------------------------------
@@ -35,7 +35,7 @@ with open("requirements.txt","r") as f:
 # Other modules:
 import time, threading
 
-raise OSError("Check for your output in math problems.")
+#raise OSError("Check for your output in math problems.")
 
 ###
 ### Global variables:
@@ -55,7 +55,8 @@ defaut = {name: "",
 
 operations = {"Addition": (lambda x,y: x + y,"+",2),
                       "Substraction":(lambda x,y: x - y,"-",2),
-                      "Multiplication":(lambda x,y: x * y, "*",2)}
+                      "Multiplication":(lambda x,y: x * y, "*",2),
+                      "Exponentiation":(lambda x,y: x ** y, "**",2)}
 
 
 ###
@@ -377,7 +378,7 @@ def start(*,operations = operations, time_remaining: int = time_remaining, tries
                 sys.exit()
             else:
                 print("Okay, let's continue with the program, but first we will go back to the beginning.")
-                return start(name = name, skip = True)
+                return start(name = name,  time_remaining = time_remaining, tries = tries, base_diff = base_diff, skip = True, difficulty = difficulty)
 
     elif option == "3":
         print("I understand, see you later :D\n")
@@ -393,7 +394,7 @@ def start(*,operations = operations, time_remaining: int = time_remaining, tries
             time.sleep(1)
         elif bo in booleans[:5]:
             print("Let's go back to the beginning:")
-            return start(name = name)
+            return start(name = name,  time_remaining = time_remaining, tries = tries, base_diff = base_diff, skip = True, difficulty = difficulty)
         else:
             print("I understand, see you later :D\n")
             sys.exit()
